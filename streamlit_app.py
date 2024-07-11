@@ -24,8 +24,9 @@ if soma < 24*60:
 
     st.pyplot(fig1)
 else:
+    st.title('Dia 1')
     tTelaAux = tTela
-    tTela = 24*60-soma
+    tTela = 24*60-(soma+tTela)
     tTelaAux = tTelaAux-tTela
     labels = 'Sono', 'Escola', 'Físico', 'Tela'
     sizes = [tSono, tEscola, tFisico, tTela]
