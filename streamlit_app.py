@@ -13,7 +13,7 @@ fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0)
 tFisico = fisico.hour*60+fisico.minute
 
 labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
-sizes = [15, 30, 45, 10]
+sizes = [tSono, tEscola, tFisico, tTela]
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
