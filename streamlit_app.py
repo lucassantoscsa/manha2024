@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import matplotlib.pyplot as plt
 
-st.title("Manhã do Conhecimento CSA                                                                                 ")
+st.title("Manhã do Conhecimento CSA")
 sono = st.time_input("Tempo de sono", value = datetime.time(0, 0))
 tSono = sono.hour*60+sono.minute
 tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
