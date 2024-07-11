@@ -31,7 +31,6 @@ else:
         st.title('Dia 1')
         tTelaAux = tTela
         tTela = 24*60-(soma-tTela)
-        
         tTelaAux = tTelaAux-tTela
         labels = 'Sono', 'Escola', 'Físico', 'Tela'
         sizes = [tSono, tEscola, tFisico, tTela]
@@ -41,8 +40,6 @@ else:
         st.pyplot(fig2)
     with col2:
         st.title('Dia 2')
-        tTela = 24*60-soma
-        tTelaAux = tTelaAux-tTela
         labels = '', 'Tela'
         sizes = [24*60-tTelaAux, tTelaAux]
         fig3, ax3 = plt.subplots()
