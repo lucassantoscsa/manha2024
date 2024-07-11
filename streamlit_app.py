@@ -15,14 +15,16 @@ tamanhos = [tSono, tEscola, tFisico, tTela]
 soma = sum(tamanhos)
 livre = 0
 if soma < 24*60:
-    livre = 24*60-soma
-    labels = 'Sono', 'Escola', 'Físico', 'Tela', 'Livre'
-    sizes = [tSono, tEscola, tFisico, tTela,livre]
-    fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
-    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    col1, col2 = st.columns(2)
+    with col1:   
+        livre = 24*60-soma
+        labels = 'Sono', 'Escola', 'Físico', 'Tela', 'Livre'
+        sizes = [tSono, tEscola, tFisico, tTela,livre]
+        fig1, ax1 = plt.subplots()
+        ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-    st.pyplot(fig1)
+        st.pyplot(fig1)
 else:
     col1, col2 = st.columns(2)
     with col1:
