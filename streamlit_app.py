@@ -11,12 +11,13 @@ escola = st.time_input("Tempo de escola", value = datetime.time(0, 0))
 tEscola = escola.hour*60+escola.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
+soma = 
 
-labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+labels = 'Sono', 'Escola', 'Físico', 'Tela'
 sizes = [tSono, tEscola, tFisico, tTela]
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-        shadow=True, startangle=90)
+        shadow=false, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 st.pyplot(fig1)
