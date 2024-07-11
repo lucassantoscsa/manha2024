@@ -26,7 +26,7 @@ if soma < 24*60:
 else:
     st.title('Dia 1')
     tTelaAux = tTela
-    tTela = 24*60-(soma+tTela)
+    tTela = 24*60-(soma-tTela)
     st.title(tTela)
     tTelaAux = tTelaAux-tTela
     labels = 'Sono', 'Escola', 'Físico', 'Tela'
