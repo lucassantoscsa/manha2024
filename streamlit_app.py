@@ -11,7 +11,8 @@ escola = st.time_input("Tempo de escola", value = datetime.time(0, 0))
 tEscola = escola.hour*60+escola.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
-soma = 
+tamanhos = [tSono, tEscola, tFisico, tTela]
+soma = sum(tamanhos)
 
 labels = 'Sono', 'Escola', 'Físico', 'Tela'
 sizes = [tSono, tEscola, tFisico, tTela]
