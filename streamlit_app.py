@@ -41,7 +41,6 @@ else:
         st.pyplot(fig2)
     with col2:
         st.title('Dia 2')
-        tTelaAux = tTela
         tTela = 24*60-soma
         tTelaAux = tTelaAux-tTela
         labels = '', 'Tela'
