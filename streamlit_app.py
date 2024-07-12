@@ -19,7 +19,7 @@ with st.expander("Ver resultado"):
         tamanhos = [tSono, tEscola, tFisico,testudo, tTela]
         soma = sum(tamanhos)
         livre = 0
-        colors = plt.get_cmap('Blues')(np.linspace(0.2, 0.7, len(tamanhos)+1))
+        colors = plt.get_cmap('Reds')(np.linspace(0.2, 0.7, len(tamanhos)+1))
         if soma < 24*60:
                 col1, col2 = st.columns(2)
                 with col1:   
