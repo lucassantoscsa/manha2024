@@ -46,7 +46,7 @@ with st.expander("Ver resultado"):
                 fig2.set_facecolor('#ffffff')
                 st.pyplot(fig2)
                 horasNovo = round(tTelaAux/60)
-                st.subheader('This is a subheader with a divider', divider='rainbow')
+                st.subheader('Quantas horas tem seu dia?', divider='rainbow')
                 st.write("Com os dados apresentados, seria necessário mais um segundo dia em que você gastaria "+str(horasNovo)+" hora(s) usando o celular, será que você tem cumprido mesmo os horários que propôs acima? Veja abaixo quanto de um novo dia você gastaria.")                  
                 labels = '', 'Tempo Excedente Gasto em Tela: '+str(horasNovo)+" horas."
                 sizes = [24*60-tTelaAux, tTelaAux]
