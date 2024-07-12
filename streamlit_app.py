@@ -25,7 +25,7 @@ with st.expander("Ver resultado"):
                         livre = 24*60-soma
                         labels = 'Sono', 'Escola', 'Físico', 'Tela', 'Estudos','Livre'
                         sizes = [tSono, tEscola, tFisico, tTela,testudo, livre]
-                        colors = plt.get_cmap('Blues')(np.linspace(0.2, 0.7, len(x)))
+                        colors = plt.get_cmap('Blues')(np.linspace(0.2, 0.7, 10))
                         fig1, ax1 = plt.subplots()
                         ax1.pie(sizes, colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
                         ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
