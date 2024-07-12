@@ -43,7 +43,7 @@ with st.expander("Ver resultado"):
                         ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                         st.pyplot(fig2)
                 with col2:
-                        st.title('Dia 1')
+                        st.title('Dia 2')
                         st.write("Com os dados apresentados, seria necessário mais um segundo dia em que você usaria 3 horas usando o celular, será que você tem cumprido mesmo os horários que propôs acima?")
                         labels = '', 'Tela'
                         sizes = [24*60-tTelaAux, tTelaAux]
