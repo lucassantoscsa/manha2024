@@ -8,7 +8,7 @@ tSono = sono.hour*60+sono.minute
 escola = st.time_input("Tempo de escola", value = datetime.time(0, 0))
 tEscola = escola.hour*60+escola.minute
 estudos = st.time_input("Tempo de Estudos em Casa", value = datetime.time(0, 0))
-testudo = estudo.hour*60+estudo.minute
+testudo = estudos.hour*60+estudos.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
 tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
