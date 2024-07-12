@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 st.title("Manhã do Conhecimento CSA")
 sono = st.time_input("Tempo de sono", value = datetime.time(0, 0))
 tSono = sono.hour*60+sono.minute
-tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
-tTela = tela.hour*60+tela.minute
 escola = st.time_input("Tempo de escola", value = datetime.time(0, 0))
 tEscola = escola.hour*60+escola.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
+tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
+tTela = tela.hour*60+tela.minute
 tamanhos = [tSono, tEscola, tFisico, tTela]
 soma = sum(tamanhos)
 livre = 0
