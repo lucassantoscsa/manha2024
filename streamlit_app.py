@@ -48,7 +48,7 @@ with st.expander("Ver resultado"):
                         horasNovo = round(tTelaAux/60)
                         st.write("Com os dados apresentados, seria necessário mais um segundo dia em que você usaria "+str(horasNovo)+" hora(s) usando o celular, será que você tem cumprido mesmo os horários que propôs acima? Veja abaixo quanto de um novo dia você gastaria.")
                         st.title('Dia 2')                       
-                        labels = '', 'Tela'
+                        labels = '', 'Tempo Gasto em Tela: '+str(horasNovo)+" horas."
                         sizes = [24*60-tTelaAux, tTelaAux]
                         fig3, ax3 = plt.subplots()
                         ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#fff","fontsize":"large"})
