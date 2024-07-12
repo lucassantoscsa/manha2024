@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import matplotlib.pyplot as plt
 import numpy as np
-st.logo("https://www.colegiosantoantonio.com.br/wp-content/uploads/2024/06/csa-115-anos-1.png", link="https://www.colegiosantoantonio.com.br", icon_image="https://www.colegiosantoantonio.com.br/wp-content/uploads/2021/01/favicon-32x32.png")
+st.logo("https://www.colegiosantoantonio.com.br/wp-content/uploads/2021/01/favicon-32x32.png", link="https://www.colegiosantoantonio.com.br", icon_image="https://www.colegiosantoantonio.com.br/wp-content/uploads/2024/06/csa-115-anos-1.png")
 st.title("Manhã do Conhecimento CSA")
 sono = st.time_input("Tempo de sono", value = datetime.time(0, 0))
 tSono = sono.hour*60+sono.minute
