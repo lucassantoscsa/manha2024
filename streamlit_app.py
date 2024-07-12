@@ -23,35 +23,32 @@ with st.expander("Ver resultado"):
         livre = 0
         colors = plt.get_cmap('YlGnBu_r')(np.linspace(0.2, 0.7, len(tamanhos)+1))
         if soma < 24*60:
-                col1 = st.columns(1)
-                with col1:   
-                        livre = 24*60-soma
-                        labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
-                        sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao, livre]                        
-                        fig1, ax1 = plt.subplots()
-                        ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"large"})
-                        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-                        fig1.set_facecolor('#ffffff')
-                        st.pyplot(fig1)
+                livre = 24*60-soma
+                labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
+                sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao, livre]                        
+                fig1, ax1 = plt.subplots()
+                ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"large"})
+                ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+                fig1.set_facecolor('#ffffff')
+                st.pyplot(fig1)
         else:
-                col1 = st.columns(1)
-                with col1:
-                        tTelaAux = tTela
-                        tTela = 24*60-(soma-tTela)
-                        tTelaAux = tTelaAux-tTela
-                        labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal'
-                        sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao]
-                        fig2, ax2 = plt.subplots()
-                        ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"larger"})
-                        ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-                        fig2.set_facecolor('#ffffff')
-                        st.pyplot(fig2)
-                        horasNovo = round(tTelaAux/60)
-                        st.write("Com os dados apresentados, seria necessário mais um segundo dia em que você gastaria "+str(horasNovo)+" hora(s) usando o celular, será que você tem cumprido mesmo os horários que propôs acima? Veja abaixo quanto de um novo dia você gastaria.")                  
-                        labels = '', 'Tempo Excedente Gasto em Tela: '+str(horasNovo)+" horas."
-                        sizes = [24*60-tTelaAux, tTelaAux]
-                        fig3, ax3 = plt.subplots()
-                        ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#31333f","fontsize":"larger"})
-                        ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-                        fig3.set_facecolor('#ffffff')
-                        st.pyplot(fig3)
+                
+                tTelaAux = tTela
+                tTela = 24*60-(soma-tTela)
+                tTelaAux = tTelaAux-tTela
+                labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal'
+                sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao]
+                fig2, ax2 = plt.subplots()
+                ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"larger"})
+                ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+                fig2.set_facecolor('#ffffff')
+                st.pyplot(fig2)
+                horasNovo = round(tTelaAux/60)
+                st.write("Com os dados apresentados, seria necessário mais um segundo dia em que você gastaria "+str(horasNovo)+" hora(s) usando o celular, será que você tem cumprido mesmo os horários que propôs acima? Veja abaixo quanto de um novo dia você gastaria.")                  
+                labels = '', 'Tempo Excedente Gasto em Tela: '+str(horasNovo)+" horas."
+                sizes = [24*60-tTelaAux, tTelaAux]
+                fig3, ax3 = plt.subplots()
+                ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#31333f","fontsize":"larger"})
+                ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+                fig3.set_facecolor('#ffffff')
+                st.pyplot(fig3)
