@@ -23,7 +23,7 @@ with st.expander("Ver resultado"):
         livre = 0
         colors = plt.get_cmap('YlGnBu_r')(np.linspace(0.2, 0.7, len(tamanhos)+1))
         if soma < 24*60:
-                col1, col2 = st.columns(2)
+                col1 = st.columns(1)
                 with col1:   
                         livre = 24*60-soma
                         labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
@@ -34,7 +34,7 @@ with st.expander("Ver resultado"):
                         fig1.set_facecolor('#ffffff')
                         st.pyplot(fig1)
         else:
-                col1, col2 = st.columns(2)
+                col1 = st.columns(1)
                 with col1:
                         tTelaAux = tTela
                         tTela = 24*60-(soma-tTela)
