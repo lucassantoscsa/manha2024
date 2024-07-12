@@ -11,12 +11,13 @@ estudos = st.time_input("Tempo de Estudos em Casa", value = datetime.time(0, 0))
 testudo = estudos.hour*60+estudos.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
-tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
-tTela = tela.hour*60+tela.minute
-tamanhos = [tSono, tEscola, tFisico,testudo, tTela]
-soma = sum(tamanhos)
-livre = 0
+
 with st.expander("Ver resultado"):
+        tela = st.time_input("Tempo de tela", value = datetime.time(0, 0))
+        tTela = tela.hour*60+tela.minute
+        tamanhos = [tSono, tEscola, tFisico,testudo, tTela]
+        soma = sum(tamanhos)
+        livre = 0
         if soma < 24*60:
                 col1, col2 = st.columns(2)
                 with col1:   
@@ -42,7 +43,7 @@ with st.expander("Ver resultado"):
                         ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                         st.pyplot(fig2)
                 with col2:
-                        st.title('Dia 2')
+                        st.text("Com os dados apresentados, seria necessário mais um segundo dia em que você usaria 3 horas usando o celular, será que você tem cumprido mesmo os horários que propôs acima?")
                         labels = '', 'Tela'
                         sizes = [24*60-tTelaAux, tTelaAux]
                         fig3, ax3 = plt.subplots()
