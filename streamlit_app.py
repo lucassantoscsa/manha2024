@@ -41,7 +41,7 @@ with st.expander("Ver resultado"):
                         labels = 'Sono', 'Escola', 'Físico', 'Tela', 'Estudos','Livre'
                         sizes = [tSono, tEscola, tFisico, tTela,testudo, livre]
                         fig2, ax2 = plt.subplots()
-                        ax2.pie(sizes, wedgeprops={dict(width=0.3),"linewidth": 1, "edgecolor": "white"},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+                        ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
                         ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                         st.pyplot(fig2)
                         horasNovo = round(tTelaAux/60)
