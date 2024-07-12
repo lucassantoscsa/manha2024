@@ -27,7 +27,7 @@ with st.expander("Ver resultado"):
                         labels = 'Sono', 'Escola', 'Físico', 'Tela', 'Estudos','Livre'
                         sizes = [tSono, tEscola, tFisico, tTela,testudo, livre]                        
                         fig1, ax1 = plt.subplots()
-                        ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white"},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+                        ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
                         ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
                         st.pyplot(fig1)
@@ -50,7 +50,7 @@ with st.expander("Ver resultado"):
                         labels = '', 'Tela'
                         sizes = [24*60-tTelaAux, tTelaAux]
                         fig3, ax3 = plt.subplots()
-                        ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white"},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+                        ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
                         ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
                         st.pyplot(fig3)
