@@ -12,22 +12,24 @@ estudos = st.time_input("Tempo de Estudos em Casa", value = datetime.time(0, 0))
 testudo = estudos.hour*60+estudos.minute
 fisico = st.time_input("Tempo de Atividade Física", value = datetime.time(0, 0))
 tFisico = fisico.hour*60+fisico.minute
+extra = st.time_input("Tempo de Atividades Extras", value = datetime.time(0, 0))
+tExtra = extra.hour*60+extra.minute
 refeicao = st.time_input("Tempo de Refeição e Higiente Pessoal", value = datetime.time(0, 0))
 tRefeicao = refeicao.hour*60+refeicao.minute
 
 with st.expander("Ver resultado"):
         tela = st.time_input("Tempo de uso do celular", value = datetime.time(0, 0))
         tTela = tela.hour*60+tela.minute
-        tamanhos = [tSono, tEscola, tFisico,testudo, tTela]
+        tamanhos = [tSono, tEscola, tFisico,testudo, tTela,tExtra]
         soma = sum(tamanhos)
         livre = 0
         colors = plt.get_cmap('YlGnBu_r')(np.linspace(0.2, 0.7, len(tamanhos)+1))
         if soma < 24*60:
                 livre = 24*60-soma
-                labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
-                sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao, livre]                        
+                labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
+                sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao, livre]                        
                 fig1, ax1 = plt.subplots()
-                ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"large"})
+                ax1.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"large"})
                 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 fig1.set_facecolor('#ffffff')
                 st.pyplot(fig1)
@@ -36,10 +38,10 @@ with st.expander("Ver resultado"):
                 tTelaAux = tTela
                 tTela = 24*60-(soma-tTela)
                 tTelaAux = tTelaAux-tTela
-                labels = 'Sono', 'Escola', 'Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal'
-                sizes = [tSono, tEscola, tFisico, tTela,testudo, tRefeicao]
+                labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
+                sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao, livre]  
                 fig2, ax2 = plt.subplots()
-                ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"larger"})
+                ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"larger"})
                 ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 fig2.set_facecolor('#ffffff')
                 st.pyplot(fig2)
@@ -48,7 +50,7 @@ with st.expander("Ver resultado"):
                 labels = '', 'Tempo Excedente Gasto em Tela: '+str(horasNovo)+" horas."
                 sizes = [24*60-tTelaAux, tTelaAux]
                 fig3, ax3 = plt.subplots()
-                ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#31333f","fontsize":"larger"})
+                ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.1},labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#31333f","fontsize":"larger"})
                 ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                 fig3.set_facecolor('#ffffff')
                 st.pyplot(fig3)
