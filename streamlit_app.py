@@ -51,7 +51,7 @@ with st.expander("Ver resultado"):
                         labels = '', 'Tempo Gasto em Tela: '+str(horasNovo)+" horas."
                         sizes = [24*60-tTelaAux, tTelaAux]
                         fig3, ax3 = plt.subplots()
-                        ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#fff","fontsize":"large"})
+                        ax3.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.3},colors = colors,labels=labels, autopct='%1.1f%%', shadow=False, startangle=90, textprops={"color":"#fff","fontsize":"larger"})
                         ax3.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
                         fig3.set_facecolor('#0e1117')
                         st.pyplot(fig3)
