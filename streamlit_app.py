@@ -38,8 +38,8 @@ with st.expander("Ver resultado"):
                 tTelaAux = tTela
                 tTela = 24*60-(soma-tTela)
                 tTelaAux = tTelaAux-tTela
-                labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
-                sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao, livre]  
+                labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal'
+                sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao]  
                 fig2, ax2 = plt.subplots()
                 ax2.pie(sizes, wedgeprops={"linewidth": 1, "edgecolor": "white","width":0.05},labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,textprops={"color":"#31333f","fontsize":"larger"})
                 ax2.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
