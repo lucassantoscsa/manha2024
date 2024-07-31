@@ -18,13 +18,16 @@ refeicao = st.time_input("Tempo de Refeição e Higiente Pessoal", value = datet
 tRefeicao = refeicao.hour*60+refeicao.minute
 
 with st.expander("Ver resultado"):
+        st.write("Verifique em seu celular seu tempo médio de tela diário antes de responder à seguinte questão.")
         tela = st.time_input("Tempo de uso do celular", value = datetime.time(0, 0))
         tTela = tela.hour*60+tela.minute
         tamanhos = [tSono, tEscola, tFisico,testudo, tTela,tExtra]
         soma = sum(tamanhos)
         livre = 0
         colors = plt.get_cmap('YlGnBu_r')(np.linspace(0.2, 0.7, len(tamanhos)+1))
-        if soma < 24*60:
+        if soma <= 24*60:
+                if tTela>180:
+                        st.write("Aparentemente você apresentou com sinceridade seus dados, porém seu tempo de uso de celular é superior ao recomendado pelos órgão de saúde. ")
                 livre = 24*60-soma
                 labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
                 sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao, livre]                        
