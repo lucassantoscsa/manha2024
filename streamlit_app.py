@@ -27,7 +27,11 @@ with st.expander("Ver resultado"):
         colors = plt.get_cmap('YlGnBu_r')(np.linspace(0.2, 0.7, len(tamanhos)+1))
         if soma <= 24*60:
                 if tTela>180:
-                        st.write("Aparentemente você apresentou com sinceridade seus dados, porém seu tempo de uso de celular é superior ao recomendado pelos órgão de saúde. ")
+                        st.write("Aparentemente você apresentou com sinceridade seus dados, porém seu tempo de uso de celular é superior ao recomendado pelos órgão de saúde.")
+                        st.write("O ideal é que você fique ligado às telas entre duas e três horas por dia. Reveja seus hábitos.")
+                elif tTela>1:
+                        st.write("PARABÉNS!!! Você está no caminho certo de uma rotina saudável!")
+                        st.write("Mas lembre sempre que ROTINA SAUDÁVEL significa ter, ao longo do dia, boas horas de sono, uma alimentação equilibrada, atividades de estudo/trabalho, além de inserir na semana atividades físicas, momentos ao ar livre, banhos de sol e lazer.")
                 livre = 24*60-soma
                 labels = 'Sono', 'Escola', 'Atividades Físicas','Atividades Extras', 'Tela', 'Estudos', 'Refeição e Higiente Pessoal','Livre'
                 sizes = [tSono, tEscola, tFisico, tExtra, tTela,testudo, tRefeicao, livre]                        
