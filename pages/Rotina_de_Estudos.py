@@ -22,7 +22,7 @@ def pont(q):
     pontuacao = opt.index(q)+1
     return(pontuacao)
 
-st.header("Avaliando o estudo na sala de aula", divider=True)
+st.subheader("Avaliando o estudo na sala de aula", divider=True)
 pontuacao_aluno = 0
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sou pontual e frequente na escola.",
     options=opt,
@@ -81,6 +81,7 @@ pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Tenho o hábito de le
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sinto-me motivado para o estudo.",
     options=opt,
 ))
+st.subheader("Avaliando o estudo em casa", divider=True)
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Acredito que sou capaz de aprender.",
 options=opt,
 ))
