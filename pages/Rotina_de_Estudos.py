@@ -54,6 +54,7 @@ pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sinto-me respeitado(a
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sinto-me à vontade para solicitar ajuda aos meus professores.",
     options=opt,
 ))
+st.subheader("Avaliando o estudo em casa", divider=True)
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Já organizei meu horário de estudos e consigo conciliar as tarefas escolares e as atividades extras (inglês, esportes, artes, lazer etc.).",
     options=opt,
 ))
@@ -81,7 +82,6 @@ pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Tenho o hábito de le
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sinto-me motivado para o estudo.",
     options=opt,
 ))
-st.subheader("Avaliando o estudo em casa", divider=True)
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Acredito que sou capaz de aprender.",
 options=opt,
 ))
