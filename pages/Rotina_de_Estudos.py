@@ -94,6 +94,6 @@ with st.expander("Ver resultado"):
         st.subheader("Sua pontuação é :orange["+str(pontuacao_aluno)+"]", divider="orange")
         st.markdown("Apesar de já ter alguns hábitos saudáveis e adequados para uma rotina de estudos, alguns ajustes são necessários para que alcance seus objetivos. Por isso, verifique os itens que precisam ser aprimorados e os corrija o quanto antes. Se precisar de ajuda, você pode falar com seus pais, seu(sua) coordenador(a), seus professores e/ou o Setor de Psicologia Educacional.")
     else:
-        st.subheader("Sua pontuação é :green["+str(pontuacao_aluno)+"] :checkmarkbutton:", divider="green")
+        st.subheader("Sua pontuação é :green["+str(pontuacao_aluno)+"] :sunglasses:", divider="green")
         st.markdown("Você está no caminho certo! Continue comprometido(a) consigo mesmo e com seus estudos que o sucesso é garantido.")
     
