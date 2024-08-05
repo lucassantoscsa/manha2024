@@ -20,7 +20,7 @@ opt = [
     ]
 def pont(q):
     pontuacao = opt.index(q)+1
-    return(q)
+    return(pontuacao)
 
 st.header("Avaliando o estudo na sala de aula", divider=True)
 
