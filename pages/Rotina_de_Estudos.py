@@ -23,8 +23,12 @@ def pont(q):
     return(pontuacao)
 
 st.header("Avaliando o estudo na sala de aula", divider=True)
-
-st.header(pont(st.select_slider(
-    "Sou pontual e frequente na escola?",
+pontuacao_aluno = 0
+pontuacao_aluno = pontuacao_aluno + pont(st.select_slider(
+    "Sou pontual e frequente na escola.",
     options=opt,
-)))
+))
+pontuacao_aluno = pontuacao_aluno + pont(st.select_slider(
+    "Apresento facilidade de concentração durante a explicação dos professores",
+    options=opt,
+))
