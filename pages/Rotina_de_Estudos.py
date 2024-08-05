@@ -23,8 +23,8 @@ def pont(q):
     return(q)
 
 st.header("Avaliando o estudo na sala de aula", divider=True)
-pont(st.select_slider(
+
+st.header(pont(st.select_slider(
     "Sou pontual e frequente na escola?",
     options=opt,
-))
-st.header(pont)
+)))
