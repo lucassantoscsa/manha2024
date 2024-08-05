@@ -85,3 +85,7 @@ pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Sinto-me motivado par
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider("Acredito que sou capaz de aprender.",
 options=opt,
 ))
+
+with st.expander("Ver resultado"):
+    if pontuacao_aluno <= 40:
+        st.subheader("Sua pontuação é :red["+str(pontuacao_aluno)+"]")
