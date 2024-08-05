@@ -88,4 +88,4 @@ options=opt,
 
 with st.expander("Ver resultado"):
     if pontuacao_aluno <= 40:
-        st.subheader("Sua pontuação é :red["+str(pontuacao_aluno)+"]")
+        st.subheader("Sua pontuação é :red["+str(pontuacao_aluno)+"]", divider="red")
