@@ -29,6 +29,6 @@ pontuacao_aluno = pontuacao_aluno + pont(st.select_slider(
     options=opt,
 ))
 pontuacao_aluno = pontuacao_aluno + pont(st.select_slider(
-    "Apresento facilidade de concentração durante a explicação dos professores",
+    "Apresento facilidade de concentração durante a explicação dos professores.",
     options=opt,
 ))
