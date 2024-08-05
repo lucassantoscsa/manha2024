@@ -3,11 +3,13 @@ import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 st.set_page_config(
     page_title="Manhã do Conhecimento",
     page_icon="🔵",
 )
 
+st.sidebar("Select a demo above.")
 st.image("https://www.colegiosantoantonio.com.br/wp-content/uploads/2024/06/csa-115-anos-1.png")
 st.title("Manhã do Conhecimento CSA")
 sono = st.time_input("Tempo de sono", value = datetime.time(0, 0))
