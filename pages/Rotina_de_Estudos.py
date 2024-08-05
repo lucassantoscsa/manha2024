@@ -89,7 +89,7 @@ options=opt,
 with st.expander("Ver resultado"):
     if pontuacao_aluno <= 40:
         st.subheader("Sua pontuação é :red["+str(pontuacao_aluno)+"]", divider="red")
-        st.text("Você precisa rever suas estratégias e se tornar mais comprometido(a). Afinal, você é o estudante, e a prática de estudos é sua responsabilidade. Se estiver precisando de ajuda, procure alguém e peça auxílio para mudanças de hábitos imediatamente. Você pode falar com seus pais, seu(sua) coordenador(a), seus professores e/ou o Setor de Psicologia Educacional.")
+        st.markdown("Você precisa rever suas estratégias e se tornar mais comprometido(a). Afinal, você é o estudante, e a prática de estudos é sua responsabilidade. Se estiver precisando de ajuda, procure alguém e peça auxílio para mudanças de hábitos imediatamente. Você pode falar com seus pais, seu(sua) coordenador(a), seus professores e/ou o Setor de Psicologia Educacional.")
     elif pontuacao_aluno <= 60:
         st.subheader("Sua pontuação é :yellow["+str(pontuacao_aluno)+"]", divider="yellow")
         st.text("Apesar de já ter alguns hábitos saudáveis e adequados para uma rotina de estudos, alguns ajustes são necessários para que alcance seus objetivos. Por isso, verifique os itens que precisam ser aprimorados e os corrija o quanto antes. Se precisar de ajuda, você pode falar com seus pais, seu(sua) coordenador(a), seus professores e/ou o Setor de Psicologia Educacional.")
